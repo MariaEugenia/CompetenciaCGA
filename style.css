@@ -1,0 +1,129 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Lateral izquierdo */
+aside {
+  width: 280px;
+  background-color: #1e2a38;
+  color: #fff;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  padding: 10px;
+  background: #2e3c4c;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.tab.active {
+  background: #4a90e2;
+  color: white;
+}
+
+/* Filtros */
+.tab-content select,
+.tab-content input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+}
+
+.tab-content label {
+  font-size: 13px;
+  margin-top: 8px;
+  display: block;
+}
+
+#clearFilters {
+  padding: 8px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#clearFilters:hover {
+  background-color: #c0392b;
+}
+
+/* Principal derecho */
+main {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background: white;
+}
+
+#search {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead th {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+tbody td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+  }
+}

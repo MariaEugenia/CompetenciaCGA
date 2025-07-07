@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>App con Filtros y Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+  <aside>
+    <div class="tabs">
+      <div class="tab active" data-tab="filtrado">Filtrado</div>
+      <div class="tab" data-tab="dashboard">Dashboard</div>
+      <div class="tab" data-tab="otros">Otros</div>
+    </div>
+
+    <div class="tab-content" id="tab-filtrado">
+      <label for="filterClub">Club:</label>
+      <select id="filterClub"></select>
+
+      <label for="filterCategoria">Categoría:</label>
+      <select id="filterCategoria"><option value="">Todos</option></select>
+
+      <label for="filterNivel">Nivel:</label>
+      <select id="filterNivel">option value="">Todos</option></select>
+
+      <label for="filterAparato">Aparato:</label>
+      <select id="filterAparato"><option value="">Todos</option></select>
+
+      <label for="filterTurno">Turno:</label>
+      <select id="filterTurno"><option value="">Todos</option></select>
+
+      <button id="clearFilters">Borrar filtros</button>
+
+    </div>
+
+    <div class="tab-content" id="tab-otros" style="display:none;">
+      <p>Aquí puede ir contenido extra o futuras funciones</p>
+    </div>
+  </aside>
+  <main>
+    <input type="text" id="search" placeholder="Buscar general...">
+    <div id="results"></div>
+    <div class="tab-content" id="tab-dashboard" style="display:none;">
+      <h3>Top 5 por Categoría</h3>
+      <select id="filterCategoria"><option value="">Todos</option></select>
+      <div id="top5Categorias"></div>
+      <div id="top5Categorias"></div>
+      <h3>Club con mejor rendimiento</h3>
+      <div id="mejorClub"></div>
+      <h3>Resultados totales por niña (según filtros)</h3>
+      <div id="dashboardFiltrado"></div>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
