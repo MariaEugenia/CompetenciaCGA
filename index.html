@@ -11,23 +11,19 @@
 <div class="container">
   <aside>
     <div class="tabs">
-      <div class="tab active" data-tab="filtrado">Filtrado</div>
-      <div class="tab" data-tab="dashboard">Dashboard</div>
-      <div class="tab" data-tab="otros">Otros</div>
+      <div class="tab active" data-tab="filtrado">General</div>
+      <div class="tab" data-tab="dashboard">Resultados</div>
     </div>
 
     <div class="tab-content" id="tab-filtrado">
       <label for="filterClub">Club:</label>
-      <select id="filterClub"></select>
+      <select id="filterClub"><option value="">Todos</option></select>
 
       <label for="filterCategoria">Categoría:</label>
       <select id="filterCategoria"><option value="">Todos</option></select>
 
       <label for="filterNivel">Nivel:</label>
-      <select id="filterNivel">option value="">Todos</option></select>
-
-      <label for="filterAparato">Aparato:</label>
-      <select id="filterAparato"><option value="">Todos</option></select>
+      <select id="filterNivel"><option value="">Todos</option></select>
 
       <label for="filterTurno">Turno:</label>
       <select id="filterTurno"><option value="">Todos</option></select>
@@ -41,18 +37,21 @@
     </div>
   </aside>
   <main>
-    <input type="text" id="search" placeholder="Buscar general...">
-    <div id="results"></div>
+    <div id="filtradoResultados">
+      <input type="text" id="search" placeholder="Buscar general...">
+      <div id="activeFilters" class="active-filters"></div>
+      <div id="results"></div>
+      <button id="btnAgregarNuevaFila">Agregar resultado</button>
+    </div>
     <div class="tab-content" id="tab-dashboard" style="display:none;">
       <h3>Top 5 por Categoría</h3>
-      <select id="filterCategoria"><option value="">Todos</option></select>
-      <div id="top5Categorias"></div>
       <div id="top5Categorias"></div>
       <h3>Club con mejor rendimiento</h3>
       <div id="mejorClub"></div>
       <h3>Resultados totales por niña (según filtros)</h3>
       <div id="dashboardFiltrado"></div>
     </div>
+
   </main>
 </div>
 
